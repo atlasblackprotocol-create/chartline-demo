@@ -37,6 +37,11 @@ struct RecordsView: View {
             }
             .navyScreen()
             .navigationTitle("Health Record")
+            .toolbar {
+                if viewer == .patient {
+                    ToolbarItem(placement: .topBarTrailing) { ShareReportButton() }
+                }
+            }
         }
     }
 

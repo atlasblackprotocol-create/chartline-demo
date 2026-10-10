@@ -75,7 +75,7 @@ extension RiskBand {
 
 struct DemoBanner: View {
     var body: some View {
-        Label("Synthetic demo data — not real patient information", systemImage: "testtube.2")
+        Label("Synthetic demo data. Not real patient information", systemImage: "testtube.2")
             .font(.caption2.weight(.semibold))
             .foregroundStyle(.secondary)
             .frame(maxWidth: .infinity)
