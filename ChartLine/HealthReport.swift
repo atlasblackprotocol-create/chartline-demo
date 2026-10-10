@@ -322,11 +322,9 @@ private struct PageWriter {
             Ink.teal.setFill()
             UIRectFill(CGRect(x: 0, y: band.maxY, width: Layout.page.width, height: 3))
             if let logo = UIImage(named: "ChartLineLogo") {
-                let h: CGFloat = 34
+                let h: CGFloat = 60
                 let w = logo.size.width / logo.size.height * h
-                logo.draw(in: CGRect(x: Layout.margin, y: 22, width: w, height: h))
-                draw("HEALTH", at: CGPoint(x: Layout.margin, y: 60), font: .systemFont(ofSize: 7, weight: .semibold),
-                     color: UIColor(white: 1, alpha: 0.75), kern: 4)
+                logo.draw(in: CGRect(x: Layout.margin, y: 16, width: w, height: h))
             } else {
                 draw("ChartLine Health", at: CGPoint(x: Layout.margin, y: 32), font: .systemFont(ofSize: 20, weight: .bold), color: .white)
             }
