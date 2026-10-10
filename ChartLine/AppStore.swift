@@ -51,6 +51,17 @@ final class AppStore {
 
     // MARK: Records
 
+    /// The employee handed a copy of their own record to someone outside ChartLine.
+    func logReportShared(_ options: HealthReportOptions, via destination: String) {
+        let recipient = options.preparedFor.trimmingCharacters(in: .whitespacesAndNewlines)
+        let to = recipient.isEmpty ? "" : " for \(recipient)"
+        log(
+            actor: patient.name,
+            action: "Shared health report\(to) via \(destination): \(options.sectionTitles.joined(separator: ", "))",
+            icon: "square.and.arrow.up"
+        )
+    }
+
     func series(_ kind: LabKind) -> LabSeries? { labs.first { $0.kind == kind } }
 
     // MARK: Appointments

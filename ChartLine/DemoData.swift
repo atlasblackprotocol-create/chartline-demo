@@ -50,7 +50,7 @@ enum DemoData {
         Encounter(date: date(2024, 11, 8), provider: "Dana Whitfield, LCSW", type: "Counseling intake",
                   summary: "Adjustment disorder screening.", category: .mentalHealth),
         Encounter(date: date(2024, 6, 12), provider: "Dr. Priya Anand", type: "Annual physical",
-                  summary: "A1C 6.0% — prediabetes. Referred to nutrition class.", category: .encounters),
+                  summary: "A1C 6.0%, prediabetes. Referred to nutrition class.", category: .encounters),
     ]
 
     static let medications: [Medication] = [

@@ -13,6 +13,7 @@ struct OverviewView: View {
                     patientCard
                     flagsCard
                     nextVisitCard
+                    shareCard
                     privacyCard
                 }
                 .padding()
@@ -102,6 +103,17 @@ struct OverviewView: View {
             } else {
                 Text("Nothing booked yet.").font(.subheadline).foregroundStyle(.secondary)
             }
+        }
+    }
+
+    private var shareCard: some View {
+        Card {
+            Label("Seeing a new doctor?", systemImage: "doc.text.fill").font(.headline)
+            Text("Send your full health report, with every lab, trend and visit so far, to any provider. You choose what goes in.")
+                .font(.subheadline).foregroundStyle(.secondary)
+            ShareReportButton()
+                .buttonStyle(.borderedProminent)
+                .frame(maxWidth: .infinity)
         }
     }
 
