@@ -25,23 +25,16 @@ extension LinearGradient {
     static let brand = LinearGradient(colors: [.brand, .brandCyan, .brandMint], startPoint: .leading, endPoint: .trailing)
 }
 
-/// The ChartLine logo with the "HEALTH" line set under it, on a transparent background.
+/// The full ChartLine Health logo (mark, wordmark and "HEALTH") on a transparent background.
 struct BrandHeader: View {
     var body: some View {
-        VStack(spacing: 4) {
-            Image("ChartLineLogo")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 150)
-            Text("HEALTH")
-                .font(.system(size: 10, weight: .semibold))
-                .tracking(6)
-                .foregroundStyle(LinearGradient.brand)
-        }
-        .padding(.vertical, 8)
-        .frame(maxWidth: .infinity)
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("ChartLine Health")
+        Image("ChartLineLogo")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 170)
+            .padding(.vertical, 8)
+            .frame(maxWidth: .infinity)
+            .accessibilityLabel("ChartLine Health")
     }
 }
 
